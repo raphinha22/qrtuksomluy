@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+  </head>
+  <style>
+    .qr{
+        width: 200px;
+        margin: 0 10px;
+    }
+  </style>
+  <body>
+    <div class="flex flex-col justify-center items-center h-screen">
+      <marquee behavior="" direction="">os luy aii</marquee>
+      <button
+        id="help"
+        class="p-2 bg-green-500 text-white font-semibold rounded-lg"
+      >
+        សុំលុយចាយខ្លះមក♥️
+      </button>
+
+      <div class="absolute hidden" id="show">
+        <button class="close">&#10006</button>
+        <div class="flex">
+            <img class="qr" src="./qrdola.jpg" alt="QR CODE">
+            <img class="qr" src="./qrriel.jpg" alt="QR CODE">
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const helps = document.getElementById("help"); 
+    const show = document.getElementById("show"); 
+    const close = document.querySelector(".close"); 
+    helps.addEventListener("click", () => {
+        show.style.display = 'block';
+    });
+    close.addEventListener("click", () => {
+        show.style.display = 'none';
+    });
+  </script>
+</html>
